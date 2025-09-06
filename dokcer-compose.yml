@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    container_name: flask-books
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app
+      - ./instance:/app/instance
+    environment:
+      FLASK_SECRET: "dev-secret"
+      BOOKS_DB: /app/instance/books.db
+    restart: unless-stopped
+

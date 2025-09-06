@@ -1,0 +1,7 @@
+__pycache__
+instance/*.db
+*.pyc
+.env
+.git
+.vscode
+*.sqlite3
